@@ -42,6 +42,7 @@ const Form = () => {
                 <label>Sign up for email notifications:
                     <input type="checkbox" value={user.emailNotifications} />
                 </label><br/>
+                <button>Submit</button>
             </form>
         </>
     )
