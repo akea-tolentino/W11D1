@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import turkey from "../images/turkey.png";
 import feather1 from "../images/feather1.svg";
 import feather2 from "../images/feather2.svg";
@@ -24,7 +25,22 @@ const feathers = [
 ];
 
 function PictureDisplay ({ size, featherCount, featherColors }) {
-  console.log('PictureDisplay', size, featherCount, featherColors);
+
+  // useEffect (() => {
+  //   console.log('PictureDisplay', size, featherCount, featherColors);
+  // }, [size, featherCount, featherColors])  
+  
+  useEffect (() => {
+    console.log('PictureDisplaySize', size);
+  }, [size])  
+  
+  useEffect (() => {
+    console.log('PictureDisplayFeatherCount', featherCount);
+  }, [featherCount])
+
+  useEffect (() => {
+    console.log('PictureDisplayFeatherColors', featherColors);
+  }, [featherColors])
 
   // TODO: Wrap in useEffect
   const colors = [];
